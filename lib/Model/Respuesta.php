@@ -15,8 +15,7 @@ class Respuesta implements ModelInterface, ArrayAccess
         'folio_consulta' => 'string',
         'folio_otorgante' => 'string',
         'score' => 'float',
-        'ventana_de_tiempo' => '\SmartCollectionScore\Client\Model\CatalogoVentanaTiempo',
-        'frontera_de_impago' => '\SmartCollectionScore\Client\Model\CatalogoFronteraDeImpago',
+        'frontera_de_impago' => '\SmartCollectionScore\Client\Model\CatalogoVentanaTiempo',
         'error_code' => '\SmartCollectionScore\Client\Model\CatalogoErrorCode',
         'fecha_de_calculo' => 'string'
     ];
@@ -25,7 +24,6 @@ class Respuesta implements ModelInterface, ArrayAccess
         'folio_consulta' => null,
         'folio_otorgante' => null,
         'score' => null,
-        'ventana_de_tiempo' => null,
         'frontera_de_impago' => null,
         'error_code' => null,
         'fecha_de_calculo' => null
@@ -45,7 +43,6 @@ class Respuesta implements ModelInterface, ArrayAccess
         'folio_consulta' => 'folioConsulta',
         'folio_otorgante' => 'folioOtorgante',
         'score' => 'score',
-        'ventana_de_tiempo' => 'ventanaDeTiempo',
         'frontera_de_impago' => 'fronteraDeImpago',
         'error_code' => 'errorCode',
         'fecha_de_calculo' => 'fechaDeCalculo'
@@ -55,7 +52,6 @@ class Respuesta implements ModelInterface, ArrayAccess
         'folio_consulta' => 'setFolioConsulta',
         'folio_otorgante' => 'setFolioOtorgante',
         'score' => 'setScore',
-        'ventana_de_tiempo' => 'setVentanaDeTiempo',
         'frontera_de_impago' => 'setFronteraDeImpago',
         'error_code' => 'setErrorCode',
         'fecha_de_calculo' => 'setFechaDeCalculo'
@@ -65,7 +61,6 @@ class Respuesta implements ModelInterface, ArrayAccess
         'folio_consulta' => 'getFolioConsulta',
         'folio_otorgante' => 'getFolioOtorgante',
         'score' => 'getScore',
-        'ventana_de_tiempo' => 'getVentanaDeTiempo',
         'frontera_de_impago' => 'getFronteraDeImpago',
         'error_code' => 'getErrorCode',
         'fecha_de_calculo' => 'getFechaDeCalculo'
@@ -100,7 +95,6 @@ class Respuesta implements ModelInterface, ArrayAccess
         $this->container['folio_consulta'] = isset($data['folio_consulta']) ? $data['folio_consulta'] : null;
         $this->container['folio_otorgante'] = isset($data['folio_otorgante']) ? $data['folio_otorgante'] : null;
         $this->container['score'] = isset($data['score']) ? $data['score'] : null;
-        $this->container['ventana_de_tiempo'] = isset($data['ventana_de_tiempo']) ? $data['ventana_de_tiempo'] : null;
         $this->container['frontera_de_impago'] = isset($data['frontera_de_impago']) ? $data['frontera_de_impago'] : null;
         $this->container['error_code'] = isset($data['error_code']) ? $data['error_code'] : null;
         $this->container['fecha_de_calculo'] = isset($data['fecha_de_calculo']) ? $data['fecha_de_calculo'] : null;
@@ -117,9 +111,6 @@ class Respuesta implements ModelInterface, ArrayAccess
         }
         if ($this->container['score'] === null) {
             $invalidProperties[] = "'score' can't be null";
-        }
-        if ($this->container['ventana_de_tiempo'] === null) {
-            $invalidProperties[] = "'ventana_de_tiempo' can't be null";
         }
         if ($this->container['frontera_de_impago'] === null) {
             $invalidProperties[] = "'frontera_de_impago' can't be null";
@@ -170,16 +161,7 @@ class Respuesta implements ModelInterface, ArrayAccess
         return $this;
     }
     
-    public function getVentanaDeTiempo()
-    {
-        return $this->container['ventana_de_tiempo'];
-    }
-    
-    public function setVentanaDeTiempo($ventana_de_tiempo)
-    {
-        $this->container['ventana_de_tiempo'] = $ventana_de_tiempo;
-        return $this;
-    }
+
     
     public function getFronteraDeImpago()
     {

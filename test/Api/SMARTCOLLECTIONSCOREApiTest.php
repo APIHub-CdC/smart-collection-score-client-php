@@ -68,8 +68,7 @@ class SMARTCOLLECTIONSCOREApiTest extends \PHPUnit_Framework_TestCase
             $body->settipoContrato($catalogoTipoContrato::TC);
             $body->settipoCuenta($catalogoTipoCuenta::R);
             $body->settipoFrecuencia($catalogoTipoFrecuencia::M);
-            $body->setventanaDeTiempo($catalogoVentanaTiempo::_1_M);
-            $body->setfronteraDeImpago($catalogoFronteraDeImpago::_30);
+            $body->setfronteraDeImpago($catalogoVentanaTiempo::_1_M);
             $body->setperiodosVencidos($catalogoPeriodosVencidos::_1);
             $body->setsaldoVencido("saldoVencido");
             $body->setsaldoActual("saldoActual");

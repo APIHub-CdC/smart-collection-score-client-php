@@ -17,8 +17,7 @@ class Peticion implements ModelInterface, ArrayAccess
         'tipo_contrato' => '\SmartCollectionScore\Client\Model\CatalogoTipoContrato',
         'tipo_cuenta' => '\SmartCollectionScore\Client\Model\CatalogoTipoCuenta',
         'tipo_frecuencia' => '\SmartCollectionScore\Client\Model\CatalogoTipoFrecuencia',
-        'ventana_de_tiempo' => '\SmartCollectionScore\Client\Model\CatalogoVentanaTiempo',
-        'frontera_de_impago' => '\SmartCollectionScore\Client\Model\CatalogoFronteraDeImpago',
+        'frontera_de_impago' => '\SmartCollectionScore\Client\Model\CatalogoVentanaTiempo',
         'periodos_vencidos' => '\SmartCollectionScore\Client\Model\CatalogoPeriodosVencidos',
         'saldo_vencido' => 'string',
         'saldo_actual' => 'string'
@@ -30,7 +29,6 @@ class Peticion implements ModelInterface, ArrayAccess
         'tipo_contrato' => null,
         'tipo_cuenta' => null,
         'tipo_frecuencia' => null,
-        'ventana_de_tiempo' => null,
         'frontera_de_impago' => null,
         'periodos_vencidos' => null,
         'saldo_vencido' => null,
@@ -53,7 +51,6 @@ class Peticion implements ModelInterface, ArrayAccess
         'tipo_contrato' => 'tipoContrato',
         'tipo_cuenta' => 'tipoCuenta',
         'tipo_frecuencia' => 'tipoFrecuencia',
-        'ventana_de_tiempo' => 'ventanaDeTiempo',
         'frontera_de_impago' => 'fronteraDeImpago',
         'periodos_vencidos' => 'periodosVencidos',
         'saldo_vencido' => 'saldoVencido',
@@ -66,7 +63,6 @@ class Peticion implements ModelInterface, ArrayAccess
         'tipo_contrato' => 'setTipoContrato',
         'tipo_cuenta' => 'setTipoCuenta',
         'tipo_frecuencia' => 'setTipoFrecuencia',
-        'ventana_de_tiempo' => 'setVentanaDeTiempo',
         'frontera_de_impago' => 'setFronteraDeImpago',
         'periodos_vencidos' => 'setPeriodosVencidos',
         'saldo_vencido' => 'setSaldoVencido',
@@ -79,7 +75,6 @@ class Peticion implements ModelInterface, ArrayAccess
         'tipo_contrato' => 'getTipoContrato',
         'tipo_cuenta' => 'getTipoCuenta',
         'tipo_frecuencia' => 'getTipoFrecuencia',
-        'ventana_de_tiempo' => 'getVentanaDeTiempo',
         'frontera_de_impago' => 'getFronteraDeImpago',
         'periodos_vencidos' => 'getPeriodosVencidos',
         'saldo_vencido' => 'getSaldoVencido',
@@ -117,7 +112,6 @@ class Peticion implements ModelInterface, ArrayAccess
         $this->container['tipo_contrato'] = isset($data['tipo_contrato']) ? $data['tipo_contrato'] : null;
         $this->container['tipo_cuenta'] = isset($data['tipo_cuenta']) ? $data['tipo_cuenta'] : null;
         $this->container['tipo_frecuencia'] = isset($data['tipo_frecuencia']) ? $data['tipo_frecuencia'] : null;
-        $this->container['ventana_de_tiempo'] = isset($data['ventana_de_tiempo']) ? $data['ventana_de_tiempo'] : null;
         $this->container['frontera_de_impago'] = isset($data['frontera_de_impago']) ? $data['frontera_de_impago'] : null;
         $this->container['periodos_vencidos'] = isset($data['periodos_vencidos']) ? $data['periodos_vencidos'] : null;
         $this->container['saldo_vencido'] = isset($data['saldo_vencido']) ? $data['saldo_vencido'] : null;
@@ -141,9 +135,6 @@ class Peticion implements ModelInterface, ArrayAccess
         }
         if ($this->container['tipo_frecuencia'] === null) {
             $invalidProperties[] = "'tipo_frecuencia' can't be null";
-        }
-        if ($this->container['ventana_de_tiempo'] === null) {
-            $invalidProperties[] = "'ventana_de_tiempo' can't be null";
         }
         if ($this->container['frontera_de_impago'] === null) {
             $invalidProperties[] = "'frontera_de_impago' can't be null";
@@ -221,16 +212,7 @@ class Peticion implements ModelInterface, ArrayAccess
         return $this;
     }
     
-    public function getVentanaDeTiempo()
-    {
-        return $this->container['ventana_de_tiempo'];
-    }
-    
-    public function setVentanaDeTiempo($ventana_de_tiempo)
-    {
-        $this->container['ventana_de_tiempo'] = $ventana_de_tiempo;
-        return $this;
-    }
+
     
     public function getFronteraDeImpago()
     {
